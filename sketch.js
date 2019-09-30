@@ -39,20 +39,20 @@ case 'SNOWY':
     fill(255);
     ellipse(x, y, delta, delta);
     break;
+case 'YELLOW':
+    fill(251, 210, 14);
+    if(z>0.5){ 
+    arc(x+delta, y, delta, delta, HALF_PI, PI);
+    }
+    else if(z<0.4){
+    arc(x+delta, y, delta, delta, 0, HALF_PI);
+    }
+    
 case 'LEAF':
     fill(random(110, 160), 210, 14);
     ellipse(x, y, delta, delta);
     break;
-case 'YELLOW':
-    fill(251, 210, 14);
-    if(z<0.5){ 
-    arc(x+delta, y, delta, delta, HALF_PI, PI);
-    }
-    break;
-    else{
-    arc(x+delta, y, delta, delta, 0, HALF_PI);
-    }
-    break;
+
 } }
 }
 }
