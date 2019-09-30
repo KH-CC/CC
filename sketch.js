@@ -51,6 +51,7 @@ case 'YELLOW':
 case 'LEAF':
     fill(random(110, 160), 210, 14);
     ellipse(x, y, delta, delta);
+    break;
 } }
 }
 }
