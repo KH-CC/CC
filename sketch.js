@@ -35,8 +35,12 @@ switch(mode) {
 case 'PETAL':
     ellipse(x, y+delta, delta*1.2, delta);
     break;
-case 'SNOW':
+case 'SNOWY':
     fill(255)
+    ellipse(x, y, delta, delta);
+    break;
+case 'LEAF':
+    fill(random(110, 160), 210, 14);
     ellipse(x, y, delta, delta);
     break;
 case 'YELLOW':
@@ -49,10 +53,6 @@ case 'YELLOW':
     arc(x+delta, y, delta, delta, 0, HALF_PI);
     }
     break;
-case 'LEAF':
-    fill(random(110, 160), 210, 14);
-    ellipse(x, y, delta, delta);
-    break;
 } }
 }
 }
@@ -62,7 +62,7 @@ function keyPressed() {
 switch(key){
   case 'p': mode = "PETAL";
   break;
-  case 's': mode = "SNOW";
+  case 's': mode = "SNOWY";
   break;
   case 'y': mode = "YELLOW";
   break;
