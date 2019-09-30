@@ -2,7 +2,7 @@ function setup() {
 createCanvas(windowWidth, windowHeight);
 }
 
-var mode ='RECT';
+var mode ='PETAL';
 
 function draw() {
 background(128, 186, 255);
@@ -43,11 +43,11 @@ case 'YELLOW';
     fill(251, 210, 14);
     ellipse(x, y, delta*0.5, delta*0.5);
     if(z>0.5){ 
-    arc(x+delta, y, delta, delta, HALF_PI, PI);
-    break;}
+    arc(x+delta, y, delta, delta, HALF_PI, PI);]
+    break;
     else if(z<0.4){
-    arc(x+delta, y, delta, delta, 0, HALF_PI);
-    break;}
+    arc(x+delta, y, delta, delta, 0, HALF_PI);]
+    break;
 case 'LEAF':
     fill(random(110, 160), 210, 14);
     ellipse(x, y, delta, delta);
