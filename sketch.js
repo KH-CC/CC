@@ -37,7 +37,7 @@ case 'PETAL':
     break;
 case 'SNOWY':
     fill(255);
-    ellipse(x, y, delta, delta);
+    ellipse(x+delta, y+delta, delta, delta);
     break;
 case 'LEAF':
     fill(random(110, 160), 210, 14);
