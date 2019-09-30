@@ -36,7 +36,7 @@ case 'PETAL':
     ellipse(x, y+delta, delta*1.2, delta);
     break;
 case 'SNOWY':
-    fill(255)
+    fill(255);
     ellipse(x, y, delta, delta);
     break;
 case 'LEAF':
