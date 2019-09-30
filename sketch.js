@@ -23,7 +23,7 @@ line(x, y, x+delta, y+delta);
 }
 }
   
-var x, y, r, z;
+var r, z;
 var delta = 30;
 strokeWeight(0);
 for (y=0; y<windowHeight; y+=delta) {
@@ -45,6 +45,7 @@ case 'YELLOW';
     if(z>0.5){ 
     arc(x+delta, y, delta, delta, HALF_PI, PI);
     }
+    break;
     else if(z<0.4){
     arc(x+delta, y, delta, delta, 0, HALF_PI);
     }
