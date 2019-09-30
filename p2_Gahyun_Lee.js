@@ -44,11 +44,14 @@ case 'ELLIPSE':
   
 }
 function keyPressed() {
-switch(key) { case 'p': mode = "RECT";
-break;
-case 's':mode = "ELLIPSE"; break;
-default: mode = "NONE";
-break;
-} print(mode);  
+switch(key){
+  case 'p': mode = "RECT";
+  break;
+  case 's': mode = "ELLIPSE";
+  break;
+  default: mode  = "NONE";
+  break;
+} print(mode);
   
   
+}
