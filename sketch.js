@@ -44,6 +44,7 @@ case 'YELLOW':
     if(z<0.5){ 
     arc(x+delta, y, delta, delta, HALF_PI, PI);
     }
+    break;
     else{
     arc(x+delta, y, delta, delta, 0, HALF_PI);
     }
