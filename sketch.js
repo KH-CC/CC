@@ -44,12 +44,10 @@ case 'YELLOW';
     ellipse(x, y, delta*0.5, delta*0.5);
     if(z>0.5){ 
     arc(x+delta, y, delta, delta, HALF_PI, PI);
-    }
-    break;
+    break;}
     else if(z<0.4){
     arc(x+delta, y, delta, delta, 0, HALF_PI);
-    }
-    break;
+    break;}
 case 'LEAF':
     fill(random(110, 160), 210, 14);
     ellipse(x, y, delta, delta);
