@@ -65,7 +65,6 @@ switch(key){
   case 's': mode = "SNOWY";
   break;
   case 'l': mode = "LEAF";
-  clear();
   break;
   case 'y': mode = "YELLOW";
   break;
