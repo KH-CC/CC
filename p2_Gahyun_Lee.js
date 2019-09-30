@@ -1,32 +1,54 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(17, 11, 36);
+createCanvas(windowWidth, windowHeight);
 }
 
+var mode ='RECT';
 
-function draw() { 
-  noStroke();
-  if (mouseIsPressed) {
-    frameRate(9);
-    fill(random(255));
-    var starr = random(5);
-    ellipse( random(width) , random(height) ,  starr,  starr);
-  }
-  else {
-    if (keyIsPressed)
-    if(key == 'p' || key =='P' ){
-      frameRate(0.5);
-      fill(random(255), random(255), random(255));
-      var planetr = random(20, 30);
-      ellipse( random(width), random(height), planetr, planetr);
-    }
-   else {
-     if (keyIsPressed)
-     if(key == 'c' || key =='C' ){
-       frameRate(1);
-       fill(253, 255, 181);
-       ellipse( mouseX, mouseY, 7, 7);
-     }
-   }
-  }
+function draw() {
+background(128, 186, 255);
+randomSeed(0);
+  
+var x, y, r;
+var delta = 50;
+var backSlashProb = map(mouseX, 0, windowWidth, 0,1);
+
+for (y=0; y<windowHeight; y+=delta) {
+for (x=0; x<windowWidth; x+=delta) {
+r = random(0, 1);
+if (r> 0.2 && r < backSlashProb) {
+stroke(255);
+strokeWeight(3);
+line(x, y, x+delta, y+delta);
+} 
 }
+}
+  
+var x, y, r;
+var delta = 30;
+strokeWeight(0);
+for (y=0; y<windowHeight; y+=delta) {
+for (x=0; x<windowWidth; x+=delta) {
+r = random(0, 1);
+if (r < 0.2 && r> 0.1 ) { fill(250, random(150,200), 183);
+switch(mode) {
+case 'RECT':
+    ellipse(x, y+delta, delta*1.2, delta);
+    break;
+case 'ELLIPSE':
+    fill(255)
+    ellipse(x, y, delta, delta);
+    break;
+} }
+}
+}
+  
+}
+function keyPressed() {
+switch(key) { case 'p': mode = "RECT";
+break;
+case 's':mode = "ELLIPSE"; break;
+default: mode = "NONE";
+break;
+} print(mode);  
+  
+  
