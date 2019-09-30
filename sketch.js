@@ -39,9 +39,9 @@ case 'SNOWY':
     fill(255);
     ellipse(x, y, delta, delta);
     break;
-case 'YELLOW':
-    ellipse(x, y, 0, 0);
+case 'YELLOW';
     fill(251, 210, 14);
+    ellipse(x, y, delta*0.5, delta*0.5);
     if(z>0.5){ 
     arc(x+delta, y, delta, delta, HALF_PI, PI);
     }
