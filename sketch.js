@@ -47,6 +47,7 @@ case 'YELLOW':
     else{
     arc(x+delta, y, delta, delta, 0, HALF_PI);
     }
+    break;
 case 'LEAF':
     fill(random(110, 160), 210, 14);
     ellipse(x, y, delta, delta);
@@ -59,7 +60,7 @@ function keyPressed() {
 switch(key){
   case 'p': mode = "PETAL";
   break;
-  case 's': mode = "ELLIPSE";
+  case 's': mode = "SNOW";
   break;
   case 'y': mode = "YELLOW";
   break;
