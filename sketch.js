@@ -40,6 +40,7 @@ case 'SNOWY':
     ellipse(x, y, delta, delta);
     break;
 case 'YELLOW':
+    ellipse(x, y, 0, 0);
     fill(251, 210, 14);
     if(z>0.5){ 
     arc(x+delta, y, delta, delta, HALF_PI, PI);
